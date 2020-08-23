@@ -7,7 +7,7 @@ Backend API User MGT .
 ### Clone the repository
 
 ```shell
-https://github.com/ajay9211-2019/ajay_api_user_mgt_freecharge.git
+git clone https://github.com/ajay9211-2019/ajay_api_user_mgt_freecharge.git
 cd ajay_api_user_mgt_freecharge
 ```
 
