@@ -48,7 +48,7 @@ npm start
 ### API Swagger Documentation 
 
 ``` Before call api please look api docs```
-#Go to browser : http://localhost:3000/api-docs 
+#Go to browser : http://localhost:3000/api-doc
 
 
 
