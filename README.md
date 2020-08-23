@@ -34,6 +34,7 @@ step 2 => Root project find => user_management_freecharge.sql & execute script o
 ```
 
 ### Set environment variables database config
+
 ``` root project find .env file & update database configration
 ```
 
