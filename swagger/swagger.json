@@ -1,0 +1,258 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "versions": "1.0.0",
+    "title": "Freecharge Backend Assignment API Documentation"
+  },
+  "host": "localhost",
+  "basepath": "/",
+  "schemes": ["http", "https"],
+  "tags": [
+    {
+      "name": "User CRUD"
+    },
+    {
+      "name": "User Authentication"
+    }
+    
+  ],
+  "paths": {
+    ":3000/user/create": {
+      "post": {
+        "tags": ["User CRUD"],
+        "description": "User creation",
+        "summary":"User Creation By Ajay Tiwari",
+        "operationId": "add_user",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+          "name": "fname",
+          "type": "string",
+          "in": "formData",
+          "description": "",
+          "required": true
+          },
+          {
+          "name": "lname",
+          "type": "string",
+          "in": "formData",
+          "description": "",
+          "required": true
+          },
+          {
+          "name": "email",
+          "type": "string",
+          "in": "formData",
+          "description": "",
+          "required": true
+          },
+          {
+          "name": "password",
+          "type": "string",
+          "in": "formData",
+          "description": "",
+          "required": true
+          }  
+        ],
+        "responses": {
+          "200": {
+            "description": "user created"
+            
+          }
+        }
+      }
+    },
+    ":3000/users": {
+      "get": {
+        "tags": ["User CRUD"],
+        "description": "User list",
+        "summary":"User list By Ajay Tiwari",
+        "operationId": "list_user",
+        "produces": ["application/json"],
+        "parameters": [
+         
+          {
+            "in": "header",
+            "name": "access_token",
+            "description": "access_token i.e eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNTk4MTc5MDc3LCJleHAiOjE1OTgyNjU0Nzd9.VhUEoJV246EKchhwleNYFOaTorGXh0ltqZjEVw3gWss",
+            "required": true,
+            "type": "string",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjN8RlJFRUNIQVJHRXwkMmEkMDgkSVFEZzhVZGZZWmFqOUlnTC9JcWdKZXZTd3hBclFEUUpMd1hzV2dNUDZGQ3RLc3dMeDh1T0ciLCJpYXQiOjE1OTgxODc3ODQsImV4cCI6MTU5ODI3NDE4NH0.Qlot8P1v6Pvt4Jb9qmyvFD1aB1crHu4Em1NdwGS7zJQ"
+          }
+          
+           
+        ],
+        "responses": {
+          "200": {
+            "description": "user list"
+            
+          }
+        }
+      }
+    },
+    ":3000/user/update/{id}": {
+      "patch": {
+        "tags": ["User CRUD"],
+        "description": "User update",
+        "summary":"User Creation By Ajay Tiwari",
+        "operationId": "update_user",
+        "produces": ["application/json"],
+        "parameters": [
+         
+          {
+            "in": "header",
+            "name": "access_token",
+            "description": "access_token i.e eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNTk4MTc5MDc3LCJleHAiOjE1OTgyNjU0Nzd9.VhUEoJV246EKchhwleNYFOaTorGXh0ltqZjEVw3gWss",
+            "required": true,
+            "type": "string",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjN8RlJFRUNIQVJHRXwkMmEkMDgkSVFEZzhVZGZZWmFqOUlnTC9JcWdKZXZTd3hBclFEUUpMd1hzV2dNUDZGQ3RLc3dMeDh1T0ciLCJpYXQiOjE1OTgxODc3ODQsImV4cCI6MTU5ODI3NDE4NH0.Qlot8P1v6Pvt4Jb9qmyvFD1aB1crHu4Em1NdwGS7zJQ"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The target id",
+            "required": true,
+            "type": "integer",
+            "value":2
+
+          },
+           {
+          "name": "fname",
+          "type": "string",
+          "in": "formData",
+          "description": "",
+          "required": false
+          },
+          {
+          "name": "lname",
+          "type": "string",
+          "in": "formData",
+          "description": "",
+          "required": false
+          },
+          {
+          "name": "email",
+          "type": "string",
+          "in": "formData",
+          "description": "",
+          "required": false
+          },
+          {
+          "name": "password",
+          "type": "string",
+          "in": "formData",
+          "description": "",
+          "required": false
+          }  
+        ],
+        "responses": {
+          "200": {
+            "description": "user updated"
+            
+          }
+        }
+      }
+    },
+    ":3000/user/delete/{id}": {
+      "delete": {
+        "tags": ["User CRUD"],
+        "description": "User delete",
+        "summary":"User delete By Ajay Tiwari",
+        "operationId": "delete_user",
+        "produces": ["application/json"],
+        "parameters": [
+         
+          {
+            "in": "header",
+            "name": "access_token",
+            "description": "access_token i.e eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNTk4MTc5MDc3LCJleHAiOjE1OTgyNjU0Nzd9.VhUEoJV246EKchhwleNYFOaTorGXh0ltqZjEVw3gWss",
+            "required": true,
+            "type": "string",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjN8RlJFRUNIQVJHRXwkMmEkMDgkSVFEZzhVZGZZWmFqOUlnTC9JcWdKZXZTd3hBclFEUUpMd1hzV2dNUDZGQ3RLc3dMeDh1T0ciLCJpYXQiOjE1OTgxODc3ODQsImV4cCI6MTU5ODI3NDE4NH0.Qlot8P1v6Pvt4Jb9qmyvFD1aB1crHu4Em1NdwGS7zJQ"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The target id",
+            "required": true,
+            "type": "integer",
+            "value":2
+
+          }
+           
+        ],
+        "responses": {
+          "200": {
+            "description": "user updated"
+            
+          }
+        }
+      }
+    },
+    ":3000/user/signin": {
+      "post": {
+        "tags": ["User Authentication"],
+        "description": "User auth",
+        "summary":"User auth By Ajay Tiwari",
+        "operationId": "auth_user",
+        "produces": ["application/json"],
+        "parameters": [
+         
+          
+          {
+          "name": "email",
+          "type": "string",
+          "in": "formData",
+          "description": "",
+          "required": true,
+          "value":"developer.startupindia@gmail.com"
+          },
+          {
+          "name": "password",
+          "type": "string",
+          "in": "formData",
+          "description": "",
+          "required": true,
+          "value":"ajay"
+          }  
+        ],
+        "responses": {
+          "200": {
+            "description": "user Authentication"
+            
+          }
+        }
+      }
+    },
+    ":3000/user/validateToken/{access_token}": {
+      "get": {
+        "tags": ["User Authentication"],
+        "description": "User validate token",
+        "summary":"User validate token By Ajay Tiwari",
+        "operationId": "validate_token",
+        "produces": ["application/json"],
+        "parameters": [
+         
+          
+          {
+            "name": "access_token",
+            "in": "path",
+            "description": "The target id",
+            "required": true,
+            "type": "string",
+            "value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjN8RlJFRUNIQVJHRXwkMmEkMDgkSVFEZzhVZGZZWmFqOUlnTC9JcWdKZXZTd3hBclFEUUpMd1hzV2dNUDZGQ3RLc3dMeDh1T0ciLCJpYXQiOjE1OTgxODc3ODQsImV4cCI6MTU5ODI3NDE4NH0.Qlot8P1v6Pvt4Jb9qmyvFD1aB1crHu4Em1NdwGS7zJQ"
+
+          }
+           
+        ],
+        "responses": {
+          "200": {
+            "description": "user validate token"
+            
+          }
+        }
+      }
+    }
+
+  }
+}
